@@ -1,0 +1,118 @@
+/* src/styles.css */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #e9ecef; /* Light gray background */
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #fff; /* White background for container */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s;
+}
+
+.container:hover {
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); /* Shadow effect on hover */
+}
+
+h1 {
+  text-align: center;
+  color: #343a40; /* Darker text color */
+}
+
+button {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 10px 15px;
+  margin-left: 5px;
+  transition: background-color 0.3s, transform 0.2s; /* Added transform for scaling */
+}
+
+button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+  transform: scale(1.05); /* Scale effect on hover */
+}
+
+input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+ul {
+  padding: 0;
+  list-style: none; /* No bullets */
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 4px;
+  background-color: #f8f9fa; /* Light background for tasks */
+  transition: background-color 0.3s, transform 0.2s; /* Transition for background and transform */
+}
+
+li:hover {
+  background-color: #f1f3f5; /* Slightly darker background on hover */
+}
+
+input {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+input[type="date"], select {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px;
+}
+
+/* Animation for adding/removing items */
+.fade-enter {
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+.fade-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 200ms, transform 200ms;
+}
+
+.fade-exit {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-exit-active {
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 200ms, transform 200ms;
+}
+
+.completed {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: scale(0.9);
+  }
+  to {
+      opacity: 1;
+      transform: scale(1);
+  }
+}
