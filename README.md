@@ -89,8 +89,3 @@ Animations: Further animations for task transitions for a smoother user experien
 License
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-
-
-
-
-
